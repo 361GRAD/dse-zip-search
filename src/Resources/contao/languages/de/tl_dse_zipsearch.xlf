@@ -7,6 +7,11 @@
         <target>Fachberater</target>
         </trans-unit>
 
+        <trans-unit id="tl_dse_zipsearch.id.0">
+            <source>Number</source>
+            <target>Nummer</target>
+        </trans-unit>
+
         <trans-unit id="tl_dse_zipsearch.name.0">
             <source>Name</source>
             <target>Name</target>
@@ -75,7 +80,7 @@
             <target>Gebietseinstellungen</target>
         </trans-unit>
 
-        <trans-unit id="tl_dse_zipsearch.area">
+        <trans-unit id="tl_dse_zipsearch.area.0">
             <source>Area</source>
             <target>Gebiet</target>
         </trans-unit>

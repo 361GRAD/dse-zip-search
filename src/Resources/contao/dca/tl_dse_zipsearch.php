@@ -15,6 +15,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
         'sorting'           => [
             'mode'        => 2,
             'fields'      => [
+                'id',
                 'name'
             ],
             'flag'        => 3,
@@ -22,6 +23,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
         ],
         'label'             => [
             'fields'      => [
+                'id',
                 'name'
             ],
             'showColumns' => true,
@@ -38,19 +40,24 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             'edit'   => [
                 'label' => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['edit'],
                 'href'  => 'act=edit',
-                'icon'  => 'edit.gif'
+                'icon'  => 'edit.svg'
+            ],
+            'copy'   => [
+                'label' => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['copy'],
+                'href'  => 'act=copy',
+                'icon'  => 'copy.svg'
             ],
             'delete' => [
                 'label'      => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['delete'],
                 'href'       => 'act=delete',
-                'icon'       => 'delete.gif',
+                'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm']
                     . '\'))return false;Backend.getScrollOffset()"'
             ],
             'show'   => [
                 'label'      => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['show'],
                 'href'       => 'act=show',
-                'icon'       => 'show.gif',
+                'icon'       => 'show.svg',
                 'attributes' => 'style="margin-right:3px;"'
             ],
         ],
@@ -58,11 +65,15 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
 
     'palettes' => [
 //        'default' => '{locations_legend:hide},name,geoCodeCountry,geoLat,geoLong,title,street,postal,location,text,phone,mail,web;'
-        'default' => '{adviser_legend},name,position,state,phone,fax,mobil,mail;{area_legend},area'
+        'default' => '{image_legend},addImage;{adviser_legend},name,position,state,phone,fax,mobil,mail;{area_legend},area;'
     ],
 
     'fields' => [
         'id'             => [
+            'label'     => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['id'],
+            'exclude'   => true,
+            'sorting'   => false,
+            'search'    => true,
             'sql' => 'int(10) unsigned NOT NULL auto_increment'
         ],
         'tstamp'         => [
@@ -172,7 +183,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             'eval'      => [
                 // add this line for a new button
                 'dragAndDrop'  => true,
-                'tl_class' => 'w50 clr wizard',
+                'tl_class' => 'w50 autoheight clr wizard',
                 'maxCount' => 16,
                 'columnFields' => [
                     'zip_from' => [
