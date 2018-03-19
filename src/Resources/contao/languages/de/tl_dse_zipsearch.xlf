@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="src/Resources/contao/languages/en/default.php" source-language="en" target-langue="de">
+    <body>
+        <trans-unit id="tl_dse_zipsearch.adviser_legend">
+          <source>Technical adviser</source>
+        <target>Fachberater</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.name.0">
+            <source>Name</source>
+            <target>Name</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.name.1">
+            <source>Name of the technical adviser.</source>
+            <target>Name des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.position.0">
+            <source>Position</source>
+            <target>Position</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.position.1">
+            <source>Position of the technical adviser.</source>
+            <target>Position des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.state.0">
+            <source>State</source>
+            <target>Bundesland</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.state.1">
+            <source>State where the technical adviser is located.</source>
+            <target>Bundesland des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.phone.0">
+            <source>Phone number</source>
+            <target>Telefonnummer</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.phone.1">
+            <source>Phone number of the technical adviser.</source>
+            <target>Telefonnummer des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.fax.0">
+            <source>Fax number</source>
+            <target>Telefaxnummer</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.fax.1">
+            <source>Fax number of the technical adviser.</source>
+            <target>Telefaxnummer des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.mobil.0">
+            <source>Mobil number</source>
+            <target>Mobilnummer</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.mobil.1">
+            <source>Mobil number of the technical adviser.</source>
+            <target>Mobilnummer des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.mail.0">
+            <source>E-mail address</source>
+            <target>E-Mail-Adresse</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.mail.1">
+            <source>E-mail address of the technical adviser.</source>
+            <target>E-Mail-Adresse des Fachberaters.</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.area_legend">
+            <source>Area settings</source>
+            <target>Gebietseinstellungen</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.area">
+            <source>Area</source>
+            <target>Gebiet</target>
+        </trans-unit>
+
+        <trans-unit id="tl_dse_zipsearch.zip_from">
+            <source>Zip from:</source>
+            <target>PLZ von:</target>
+        </trans-unit>
+        <trans-unit id="tl_dse_zipsearch.zip_to">
+            <source>Zip to:</source>
+            <target>PLZ bis:</target>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>
