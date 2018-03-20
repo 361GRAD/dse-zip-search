@@ -10,7 +10,7 @@
             <div class="field">
                 <label for="zip-<?= $this->id ?>"><?= $this->dse_zipsearch_redirect_text_label ?></label>
                 <div classs="input">
-                    <input type="text" id="zip-<?= $this->id ?>" name="zip" pattern="[0-9]{5}" required>
+                    <input type="text" id="zip-<?= $this->id ?>" name="zip" pattern="[0-9]{5}" required title="{{iflng::en}}exactly 5 digits{{iflng::de}}genau 5 Zeichen{{iflng}}">
                     <span class="error"><?= $this->dse_zipsearch_redirect_error ?></span>
                 </div>
                 <button type="submit"><?= $this->dse_zipsearch_redirect_button ?></button>
