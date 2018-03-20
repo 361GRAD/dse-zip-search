@@ -2,17 +2,18 @@
 <div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
     <div class="adviser">
     <?php foreach($this->arrAdvisers as $adviser): ?>
-        <div class="row">
-            <p><?= $adviser['name'] ?></p>
-            <p><?= $adviser['position'] ?></p>
-            <?php if(isset($adviser['state'])): ?>
-            <p><?= $adviser['state'] ?></p>
-            <?php endif; ?>
-            <p><?= $adviser['phone'] ?></p>
-            <p><?= $adviser['fax'] ?></p>
-            <p><?= $adviser['mobil'] ?></p>
-            <p><a href="mailto:<?= $adviser['mail'] ?>"><?= $adviser['mail'] ?></a></p>
-        </div>
+        <p><?= $adviser['data']['name'] ?></p>
+        <p><?= $adviser['data']['position'] ?></p>
+        <?php if(isset($adviser['data']['state'])): ?>
+        <p><?= $adviser['data']['state'] ?></p>
+        <?php endif; ?>
+        <p><?= $adviser['data']['phone'] ?></p>
+        <p><?= $adviser['data']['fax'] ?></p>
+        <p><?= $adviser['data']['mobil'] ?></p>
+        <p><a href="mailto:<?= $adviser['data']['mail'] ?>"><?= $adviser['data']['mail'] ?></a></p>
+        <?php if($adviser['image']): ?>
+        <p><?= $adviser['image'] ?></p>
+        <?php endif; ?>
     <?php endforeach; ?>
     </div>
 </div>
