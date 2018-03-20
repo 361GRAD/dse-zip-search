@@ -65,7 +65,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
 
     'palettes' => [
 //        'default' => '{locations_legend:hide},name,geoCodeCountry,geoLat,geoLong,title,street,postal,location,text,phone,mail,web;'
-        'default' => '{image_legend},addImage;{adviser_legend},name,position,state,phone,fax,mobil,mail;{image_legend},singleSRC,alt,title,size;{area_legend},area;'
+        'default' => '{image_legend},addImage;{adviser_legend},name,position,state,phone,fax,mobil,mail;{image_legend},singleSRC,size,alt;{area_legend},area;'
     ],
 
     'fields' => [
@@ -183,30 +183,21 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
                 'mandatory'=>true,
                 'filesOnly'=>true,
                 'extensions'=>Config::get('validImageTypes'),
-                'tl_class'=>'clr autoheight'
+                'tl_class'=>'w50 clr autoheight'
             ),
             'load_callback' => array
             (
-                array('tl_content_zip', 'setSingleSrcFlags')
+                array('tl_dse_zipsearch', 'setSingleSrcFlags')
             ),
             'save_callback' => array
             (
-                array('tl_content_zip', 'storeFileMetaInformation')
+                array('tl_dse_zipsearch', 'storeFileMetaInformation')
             ),
             'sql'                     => "binary(16) NULL"
         ),
-        'alt' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['alt'],
-            'exclude'                 => true,
-            'search'                  => true,
-            'inputType'               => 'text',
-            'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
-            'sql'                     => "varchar(255) NOT NULL default ''"
-        ),
         'size' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_content']['size'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['size'],
             'exclude'                 => true,
             'inputType'               => 'imageSize',
             'reference'               => &$GLOBALS['TL_LANG']['MSC'],
@@ -223,6 +214,19 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             },
             'sql'                     => "varchar(64) NOT NULL default ''"
         ),
+        'alt' => array
+        (
+            'label'     => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['alt'],
+            'exclude'   => true,
+            'sorting'   => false,
+            'search'    => false,
+            'inputType' => 'text',
+            'eval'      => array(
+                'maxlength' => 255,
+                'tl_class' => 'w50'
+            ),
+            'sql'       => "varchar(255) NOT NULL default ''"
+        ),
         'area'          => [
             'label'     => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['area'],
             'exclude'   => true,
@@ -230,7 +234,6 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             'search'    => false,
             'inputType' => 'multiColumnWizard',
             'eval'      => [
-                // add this line for a new button
                 'dragAndDrop'  => true,
                 'tl_class' => 'w50 autoheight clr wizard',
                 'maxCount' => 16,
@@ -255,7 +258,6 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             ],
             'sql'       => 'blob NULL',
         ],
-
 //        'text'           => [
 //            'label'     => &$GLOBALS['TL_LANG']['tl_dse_zipsearch']['text'],
 //            'exclude'   => true,
@@ -269,7 +271,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
     ]
 ];
 
-class tl_content_zip extends Backend
+class tl_dse_zipsearch extends Backend
 {
     /**
      * Dynamically add flags to the "singleSRC" field

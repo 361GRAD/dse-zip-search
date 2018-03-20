@@ -14,6 +14,7 @@ namespace Dse\ZipSearchBundle\Element;
 use Contao\BackendTemplate;
 use Contao\FrontendTemplate;
 use Contao\ContentElement;
+use Contao\PageModel;
 use Contao\FilesModel;
 use Contao\StringUtil;
 
@@ -42,7 +43,8 @@ class ContentDseZipSearchRedirect extends ContentElement
         if (TL_MODE == 'BE') {
             $objTemplate = new BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ' . $GLOBALS['TL_LANG']['CTE']['dse_zipsearch_redirect'][1] . ' ###';
+//            $objTemplate->wildcard = '### ' . $GLOBALS['TL_LANG']['CTE']['dse_zipsearch_redirect'][1] . ' ###';
+            $objTemplate->wildcard = '### ' . PageModel::findPublishedById($this->dse_zipsearch_redirect)->alias . '.html ###';
 
             return $objTemplate->parse();
         }

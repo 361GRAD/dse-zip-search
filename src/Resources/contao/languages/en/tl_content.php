@@ -9,7 +9,7 @@
  * @license   http://www.361.de proprietary
  */
 
-$GLOBALS['TL_LANG']['CTE']['dse_elements']     = 'DSE-Elemente';
+$GLOBALS['TL_LANG']['CTE']['dse_elements']     = '361 - extensions';
 $GLOBALS['TL_LANG']['CTE']['dse_zipsearch'] = ['ZIP search', 'Element - ZIP search'];
 $GLOBALS['TL_LANG']['CTE']['dse_zipsearch_redirect'] = ['ZIP Search - Redirect', 'Element - ZIP Search - Redirect'];
 

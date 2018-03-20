@@ -1,3 +1,3 @@
 <?php
 
-$GLOBALS['TL_LANG']['MOD']['dse_zipsearch'] = ['Locations','Manage locations.'];
+$GLOBALS['TL_LANG']['MOD']['dse_zipsearch'] = ['Technical adviser','Manage technical advisers.'];
