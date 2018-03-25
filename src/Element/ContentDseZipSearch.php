@@ -42,7 +42,6 @@ class ContentDseZipSearch extends ContentElement
             foreach(unserialize($data['area']) as $area) {
                 if($zip > $area['zip_from'] && $zip < $area['zip_to']) {
 
-
                     $data['singleSRC'] = FilesModel::findByUuid($data['singleSRC']);
 //                    $data['singleSRC'] = StringUtil::binToUuid($data['singleSRC']);
                     $imgReturn = Image::getHtml(Image::get($data['singleSRC']->path, unserialize($data['size'])[0], unserialize($data['size'])[1], unserialize($data['size'])[2]), 'my first image');

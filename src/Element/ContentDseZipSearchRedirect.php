@@ -60,5 +60,7 @@ class ContentDseZipSearchRedirect extends ContentElement
      */
     protected function compile()
     {
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/dsezipsearch/js/jquery.redirect.js|static';
+        $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/dsezipsearch/js/dse-zipsearch.js|static';
     }
 }

@@ -19,14 +19,6 @@
   "require-dev": {
     "phpcq/all-tasks": "^1.1"
   },
-  "scripts": {
-    "post-install-cmd": [
-      "npm install --save jquery.redirect"
-    ],
-    "post-update-cmd": [
-      "npm install --save jquery.redirect"
-    ]
-  },
   "autoload": {
     "psr-4": {
       "Dse\\ZipSearchBundle\\": "src"
