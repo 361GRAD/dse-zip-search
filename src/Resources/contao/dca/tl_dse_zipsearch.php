@@ -168,7 +168,7 @@ $GLOBALS['TL_DCA']['tl_dse_zipsearch'] = [
             'inputType' => 'text',
             'eval'      => [
                 'mandatory' => true,
-                'unique' => true,
+                'unique' => false,
                 'tl_class' => 'w50',
                 'rgxp'     => 'email'
             ],

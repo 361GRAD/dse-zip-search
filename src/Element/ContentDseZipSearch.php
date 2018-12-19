@@ -40,7 +40,7 @@ class ContentDseZipSearch extends ContentElement
 
         foreach ($query as $data) {
             foreach(unserialize($data['area']) as $area) {
-                if($zip > $area['zip_from'] && $zip < $area['zip_to']) {
+                if($zip >= $area['zip_from'] && $zip <= $area['zip_to']) {
 
                     $data['singleSRC'] = FilesModel::findByUuid($data['singleSRC']);
 //                    $data['singleSRC'] = StringUtil::binToUuid($data['singleSRC']);
